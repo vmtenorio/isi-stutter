@@ -31,6 +31,7 @@ public class StutterTest {
     // This test tours main:if (fileName == null)   
     //.It is difficult/impossible to execute, as it requires passing a command line 
     // argument that is null
+    // Cubre: 1 linea 37, 3..15 
     @Test
     public void testFromStdinWithNullArgs() {
         String[] args = {null};
@@ -52,7 +53,7 @@ public class StutterTest {
     }
     
 
-
+    // Cubre 2..15
     @Test
     public void testFromFile() {
         try {
@@ -60,9 +61,11 @@ public class StutterTest {
         } catch (IOException e) {
             fail(e.getMessage());
         }
-        assertEquals("Repeated word on line 2: word word\n", outContent.toString());
+        assertEquals("Repeated word on line 2: word word\n" +
+                	"Repeated word on line 3: word word\n", outContent.toString());
     }
     
+    // Cubre 1 linea 30, 3..15
     @Test
     public void t1() {
         String string = "hi";
